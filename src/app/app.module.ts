@@ -8,21 +8,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TempWidgetComponent } from './temp-widget/temp-widget.component';
 import { CelsiusComponent } from './temp-widget/celsius/celsius.component';
 import { FahrenheitComponent } from './temp-widget/fahrenheit/fahrenheit.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     TempWidgetComponent,
     CelsiusComponent,
-    FahrenheitComponent
+    FahrenheitComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ClarityModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
