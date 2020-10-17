@@ -1,9 +1,12 @@
 .app-container {
   display: grid;
   grid-template-columns: minmax(50%, 1fr) minmax(50%, 1fr);
-  grid-template-rows: minmax(200px, 1fr) minmax(200px, 1fr);
+  grid-template-rows: minmax(300px, 1fr) minmax(200px, 1fr);
 }
 
 .widget-container {
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
