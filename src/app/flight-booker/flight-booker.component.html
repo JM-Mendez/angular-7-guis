@@ -1,1 +1,15 @@
-<p>flight-booker works!</p>
+<div class="container">
+  <div class="card">
+    <div class="card-header">Flight Booker</div>
+    <form action="" clrForm class="card-block">
+      <clr-combobox-container>
+        <clr-combobox [(ngModel)]="flightType" name="flight-type">
+          <clr-options>
+            <clr-option clrValue="one-way flight">one-way flight</clr-option>
+            <clr-option clrValue="return flight">return flight</clr-option>
+          </clr-options>
+        </clr-combobox>
+      </clr-combobox-container>
+    </form>
+  </div>
+</div>
