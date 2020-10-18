@@ -9,6 +9,7 @@ import { TempWidgetComponent } from './temp-widget/temp-widget.component';
 import { CelsiusComponent } from './temp-widget/celsius/celsius.component';
 import { FahrenheitComponent } from './temp-widget/fahrenheit/fahrenheit.component';
 import { FormsModule } from '@angular/forms';
+import { FlightBookerComponent } from './flight-booker/flight-booker.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     TempWidgetComponent,
     CelsiusComponent,
     FahrenheitComponent,
+    FlightBookerComponent,
   ],
   imports: [
     BrowserModule,
