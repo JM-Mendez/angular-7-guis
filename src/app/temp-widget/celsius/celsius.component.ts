@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TempWidgetService } from '../temp-widget.service';
 
 @Component({
   selector: 'app-celsius',
@@ -7,12 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CelsiusComponent implements OnInit {
   temp = 0;
+  subscription: any;
 
-  constructor() {}
+  constructor(private tempService: TempWidgetService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.subscription = this.tempService
+      .getCelsiusEmitter()
+      .subscribe((value) => {
+        this.temp = value;
+      });
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
 
   onInputChange(value) {
     this.temp = value;
+    this.tempService.convertToFahrenheit(value);
   }
 }

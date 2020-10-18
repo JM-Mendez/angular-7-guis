@@ -1,4 +1,10 @@
 <clr-input-container>
   <label>Fahrenheit</label>
-  <input clrInput placeholder="0" type="number" [ngModel]="temp" />
+  <input
+    clrInput
+    placeholder="0"
+    type="number"
+    [ngModel]="temp"
+    (ngModelChange)="onInputChange($event)"
+  />
 </clr-input-container>
