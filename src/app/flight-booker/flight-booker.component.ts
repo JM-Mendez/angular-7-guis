@@ -7,8 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlightBookerComponent implements OnInit {
   flightType: 'one-way flight' | 'return flight' = 'one-way flight';
+  departure: Date;
+  return: Date;
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  get minDate() {
+    return `${this.departure?.getFullYear()}-${
+      this.departure?.getMonth() + 1
+    }-${this.departure?.getDate()}`;
+  }
 }

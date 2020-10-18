@@ -10,6 +10,18 @@
           </clr-options>
         </clr-combobox>
       </clr-combobox-container>
+      <clr-date-container>
+        <input type="date" [(clrDate)]="departure" name="departure" />
+      </clr-date-container>
+      <clr-date-container>
+        <input
+          type="date"
+          clrDate
+          name="return"
+          [(clrDate)]="return"
+          [min]="minDate"
+        />
+      </clr-date-container>
     </form>
   </div>
 </div>
