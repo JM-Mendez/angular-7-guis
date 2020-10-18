@@ -16,10 +16,10 @@
       <clr-date-container>
         <input
           type="date"
-          clrDate
           name="return"
           [(clrDate)]="return"
           [min]="minDate"
+          [disabled]="flightType === 'one-way flight'"
         />
       </clr-date-container>
     </form>
