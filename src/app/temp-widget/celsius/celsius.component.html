@@ -4,7 +4,7 @@
     clrInput
     placeholder="0"
     type="number"
-    name="name"
-    [(ngModel)]="name"
+    [ngModel]="temp"
+    (ngModelChange)="onInputChange($event)"
   />
 </clr-input-container>

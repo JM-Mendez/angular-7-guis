@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fahrenheit.component.css'],
 })
 export class FahrenheitComponent implements OnInit {
-  name = '';
+  temp = 0;
 
   constructor() {}
 

@@ -6,9 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./celsius.component.css'],
 })
 export class CelsiusComponent implements OnInit {
-  name = '';
+  temp = 0;
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  onInputChange(value) {
+    this.temp = value;
+  }
 }
